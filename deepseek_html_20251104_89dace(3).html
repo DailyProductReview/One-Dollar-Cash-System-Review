@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Gen Arbitrage Millionaire Training</title>
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --primary-dark: #c0392b;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #f39c12;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 18px;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            padding: 40px 0;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232c3e50"/><path d="M0 0L100 100M100 0L0 100" stroke="%23333" stroke-width="1"/></svg>');
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary), #2980b9);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-box {
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .cta-box h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .cta-box p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .form-container {
+            margin-top: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: rgba(255,255,255,0.9);
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--accent);
+            transform: scale(1.02);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .features {
+            padding: 50px 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-item h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .price-section {
+            padding: 50px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark), #1a2530);
+        }
+        
+        .price-tag {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+        
+        .bonus-section {
+            padding: 50px 0;
+            background-color: var(--primary);
+            text-align: center;
+        }
+        
+        .bonus-section h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+        
+        .bonus-box {
+            background-color: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .urgency {
+            background-color: var(--accent);
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        footer {
+            background-color: #1a2530;
+            padding: 25px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #95a5a6;
+        }
+        
+        .testimonial {
+            background-color: rgba(52, 152, 219, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid var(--secondary);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .video-container iframe {
+                height: 300px;
+            }
+            
+            .price-tag {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="tagline">The Revolutionary Method to Make Money Online - Even as a Complete Beginner!</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Here's How You Can GET PAID Simply by GENERATING A LEAD</h1>
+            <p>(This is NOT Affiliate Marketing. You can do this even if you're a beginner, no marketing experience needed, and you don't have to have any of your own traffic!)</p>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/918111450?h=8b6b99c375" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="testimonial">
+                <p>"I made over $5,000 in my first 30 days with this method - with no prior online marketing experience!"</p>
+                <div class="testimonial-author">- Mark S., Participant for 3 months</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Limited Spots Available!</h2>
+                <p>Sign up now for immediate access to the Lead Gen Arbitrage Millionaire Training - before the doors close!</p>
+                
+                <div class="form-container">
+                    <form method="post" action="https://www.sendsteed.com/subscribe/">
+                        <div class="form-group">
+                            <input name="e110170" required type="email" placeholder="Your best email address">
+                        </div>
+                        <div class="form-group">
+                            <input name="n110170" required type="text" placeholder="Your name">
+                        </div>
+                        <input type="hidden" name="lllid" value="110170">
+                        <input type="hidden" name="lluid" value="sandyarta">
+                        <input type="hidden" name="redirect" value="">
+                        <input type="hidden" name="source" value="">
+                        <button type="submit" class="btn">GET INSTANT ACCESS NOW!</button>
+                    </form>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 14px;">Your data is safe. No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>What You're Getting In This LEAD GEN ARBITRAGE MILLIONAIRE TRAINING</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>#1 Lead Gen Millionaire Training ($2,997 Value)</h3>
+                    <p>The complete step-by-step system I used to generate over $100 million online.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#2 What to say to buyers to close deals ($497)</h3>
+                    <p>Scripts and phrases that can secure you years of income.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#3 Buyers list who want to buy leads from you ($497 Value)</h3>
+                    <p>An immediately usable list of companies ready to pay for your leads.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#4 List of publishers to get you leads for your buyers ($497 Value)</h3>
+                    <p>Sources for high-quality leads you can use right away.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#5 Contract templates to protect you and your business ($1,497 Value)</h3>
+                    <p>Legally reviewed templates to secure you and your business.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#6 How to price your leads ($97 Value)</h3>
+                    <p>Strategies for optimal pricing to maximize profits.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#7 How to raise your prices while keeping everyone happy ($997)</h3>
+                    <p>Advanced techniques to increase your income without losing customers.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>#8 How to scale your business to the moon ($997)</h3>
+                    <p>Methods to exponentially grow your business when an offer works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="price-section">
+        <div class="container">
+            <h2>Your Investment in Your Financial Freedom</h2>
+            <div class="price-tag">
+                <span class="original-price">$4,073</span> $497
+            </div>
+            <p>One-time payment • Lifetime access • 30-Day Money-Back Guarantee</p>
+            
+            <div style="margin-top: 25px;">
+                <a href="#cta" class="btn">GET ACCESS NOW!</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bonus-section">
+        <div class="container">
+            <h2>ULTIMATE BONUS</h2>
+            <div class="bonus-box">
+                <h3>Learn our system, and I WILL BUY YOUR LEADS FROM YOU!! (PRICELESS)</h3>
+                <p>Once you master our system, I personally buy leads from many of my students. This means I could literally pay YOU to make introductions for the businesses that I promote.</p>
+                <p>This opportunity is only available for a limited time. If you're ready to dive into a lucrative online career without the usual barriers, exhausting funnel building, expensive ads, or having to build your own products and services, then 'Lead Gen Arbitrage Millionaire Training' is your answer.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="urgency">
+        <div class="container">
+            <p>⚠️ WARNING: This offer is only available for a limited time. The doors could close at any moment!</p>
+        </div>
+    </section>
+    
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Final Chance!</h2>
+                <p>You're about to change everything. Just enter your email and name to get started today!</p>
+                
+                <div class="form-container">
+                    <form method="post" action="https://www.sendsteed.com/subscribe/">
+                        <div class="form-group">
+                            <input name="e110170" required type="email" placeholder="Your best email address">
+                        </div>
+                        <div class="form-group">
+                            <input name="n110170" required type="text" placeholder="Your name">
+                        </div>
+                        <input type="hidden" name="lllid" value="110170">
+                        <input type="hidden" name="lluid" value="sandyarta">
+                        <input type="hidden" name="redirect" value="">
+                        <input type="hidden" name="source" value="">
+                        <button type="submit" class="btn">YES, I WANT FINANCIAL FREEDOM!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 Lead Gen Arbitrage Millionaire Training. All rights reserved.</p>
+            <p><a href="#" style="color: #95a5a6;">Privacy</a> | <a href="#" style="color: #95a5a6;">Terms</a> | <a href="#" style="color: #95a5a6;">Contact</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Countdown Timer for additional urgency
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simple animation for feature items
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+            
+            // Urgency Timer
+            let countdown = 60 * 30; // 30 minutes in seconds
+            
+            function updateCountdown() {
+                const minutes = Math.floor(countdown / 60);
+                const seconds = countdown % 60;
+                
+                document.querySelector('.urgency p').innerHTML = 
+                    `⚠️ WARNING: This offer is only available for a limited time. Only ${minutes}:${seconds < 10 ? '0' : ''}${seconds} minutes left until the doors close!`;
+                
+                if (countdown > 0) {
+                    countdown--;
+                    setTimeout(updateCountdown, 1000);
+                }
+            }
+            
+            updateCountdown();
+        });
+    </script>
+</body>
+</html>
