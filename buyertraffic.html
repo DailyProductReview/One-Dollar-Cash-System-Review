@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AdVantage Unleashed: Compact View</title>
+  <title>AdVantage Unleashed: Compact No-Scroll View</title>
   <style>
     :root {
       --primary: #ff3366;
@@ -19,45 +19,46 @@
       background-color: var(--dark);
       color: var(--light);
       text-align: center;
-      line-height: 1.4;
       overflow-x: hidden;
+      line-height: 1.4;
     }
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      padding: 20px;
-      border-radius: 15px;
+      padding: 15px;
+      border-radius: 10px;
       margin: 10px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
     header h1 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       background: linear-gradient(to right, #fff, var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 5px;
     }
-    header p { font-size: 1rem; opacity: 0.9; margin-top: 4px; }
+    header p { font-size: 0.95rem; opacity: 0.9; }
 
     .banner-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
       margin: 10px auto;
       max-width: 1200px;
     }
     .banner {
-      width: 180px;
-      height: 120px;
+      width: 150px;
+      height: 100px;
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .banner:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.5);
     }
     .banner img {
       width: 100%;
@@ -68,19 +69,23 @@
     .ads-section {
       background: rgba(255,255,255,0.05);
       border-radius: 10px;
-      padding: 10px;
+      padding: 5px;
       margin: 10px auto;
-      max-width: 900px;
-      font-size: 0.9rem;
+      max-width: 800px;
+      font-size: 0.85rem;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
+    .ads-section iframe, .ads-section div {
+      transform: scale(0.8);
+      transform-origin: top center;
+    }
     .refresh-btn {
-      margin-top: 10px;
+      margin-top: 5px;
       background: linear-gradient(to right, var(--primary), var(--secondary));
       border: none;
       border-radius: 30px;
-      padding: 8px 18px;
-      font-size: 0.9rem;
+      padding: 6px 14px;
+      font-size: 0.8rem;
       color: white;
       cursor: pointer;
       font-weight: bold;
@@ -91,33 +96,33 @@
 
     .newsletter {
       background: linear-gradient(135deg, var(--secondary), var(--primary));
-      padding: 15px;
-      border-radius: 12px;
-      margin: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      padding: 12px;
+      border-radius: 10px;
+      margin: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
     }
     .newsletter h2 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 6px;
     }
     .newsletter p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-bottom: 10px;
     }
     .newsletter-form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       max-width: 500px;
       margin: 0 auto;
     }
     .newsletter-form input {
-      padding: 8px 12px;
+      padding: 6px 10px;
       border: none;
       border-radius: 30px;
-      font-size: 0.9rem;
-      min-width: 180px;
+      font-size: 0.85rem;
+      min-width: 150px;
       outline: none;
     }
     .newsletter-form button {
@@ -125,16 +130,16 @@
       color: var(--dark);
       border: none;
       border-radius: 30px;
-      padding: 8px 16px;
+      padding: 6px 14px;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
     }
     .newsletter-form button:hover { background-color: #ffd700; }
     footer {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: rgba(255,255,255,0.6);
-      margin: 10px 0;
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -146,33 +151,35 @@
 
   <section class="banner-container">
     <div class="banner" onclick="window.open('https://freepostzone.com/one-dollar-unlimited-traffic-review/', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/11/u658-ChatGPT-Image-7.-Nov.-2025-18_21-1024x683.png" alt="One Dollar Unlimited Traffic Review">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/11/u658-ChatGPT-Image-7.-Nov.-2025-18_21-1024x683.png" alt="One Dollar Unlimited Traffic Review">
     </div>
     <div class="banner" onclick="window.open('https://llclick.com/723vzmv5/', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/11/u658-Screenshot-2025-11-06-at-21-45-24-Earn-40-000-Per-Sale-Revolutionary-Affiliate-Platform-2.png" alt="Affiliate Platform">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/11/u658-Screenshot-2025-11-06-at-21-45-24-Earn-40-000-Per-Sale-Revolutionary-Affiliate-Platform-2.png" alt="Affiliate Platform">
     </div>
     <div class="banner" onclick="window.open('https://freepostzone.com/traffic-bomb-halloween-special-offer/', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/10/u658-Screenshot-2025-10-30-at-21-38-51.png" alt="Traffic Bomb Offer">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/10/u658-Screenshot-2025-10-30-at-21-38-51.png" alt="Traffic Bomb Offer">
     </div>
     <div class="banner" onclick="window.open('https://freepostzone.com/one-dollar-cash-system-review/', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/10/u658-ChatGPT-Image-30.-Okt.-2025-10_1-1-1024x683.png" alt="One Dollar Cash System">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/10/u658-ChatGPT-Image-30.-Okt.-2025-10_1-1-1024x683.png" alt="One Dollar Cash System">
     </div>
     <div class="banner" onclick="window.open('https://freepostzone.com/new-affiliate-platform/', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/10/u658-Screenshot-2025-10-19-at-20-46-18-FORGET-CLICKBANK-1.png" alt="New Affiliate Platform">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/10/u658-Screenshot-2025-10-19-at-20-46-18-FORGET-CLICKBANK-1.png" alt="New Affiliate Platform">
     </div>
     <div class="banner" onclick="window.open('https://dailyproductreview.github.io/One-Dollar-Cash-System-Review/buyer', '_blank')">
-      <img src="https://freepostzone.com/wp-content/uploads/2025/10/u658-ChatGPT-Image-8.-Okt.-2025-19_3-1024x683.png" alt="One Dollar Cash System Buyer">
+      <img src="https://wsrv.nl/?url=https://freepostzone.com/wp-content/uploads/2025/10/u658-ChatGPT-Image-8.-Okt.-2025-19_3-1024x683.png" alt="One Dollar Cash System Buyer">
     </div>
   </section>
 
   <section class="ads-section">
-    <p>Exclusive Ads — refreshed automatically for new offers:</p>
-    <script data-cfasync="false">
-      ll_r="sandyarta";ll_bc="#ffffff";ll_hc="#e22121";ll_tc="#555a69";ll_cc="#8d9aa6";ll_dc="#8891a8";
-      ll_w="";ll_nf="0";ll_nc="1";ll_nh="0";ll_nm="0";ll_np="1";ll_pa="0";ll_nt="0";ll_wt="1";ll_fw="1";
-      ll_n="6";ll_cl="";ll_s="w";
-    </script>
-    <script data-cfasync="false" src="https://w.leadsleap.com/js.js"></script>
+    <p>Exclusive Ads — compact view:</p>
+    <div style="transform:scale(0.75);transform-origin:top center;">
+      <script data-cfasync="false">
+        ll_r="sandyarta";ll_bc="#ffffff";ll_hc="#e22121";ll_tc="#555a69";ll_cc="#8d9aa6";ll_dc="#8891a8";
+        ll_w="";ll_nf="0";ll_nc="1";ll_nh="0";ll_nm="0";ll_np="1";ll_pa="0";ll_nt="0";ll_wt="1";ll_fw="1";
+        ll_n="6";ll_cl="";ll_s="w";
+      </script>
+      <script data-cfasync="false" src="https://w.leadsleap.com/js.js"></script>
+    </div>
     <button class="refresh-btn" onclick="window.location.reload()">🔁 Refresh Ads</button>
   </section>
 
