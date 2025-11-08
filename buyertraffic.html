@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AdVantage Unleashed: Click & Discover High-Converting Offers</title>
+  <title>AdVantage Unleashed: Compact View</title>
   <style>
     :root {
       --primary: #ff3366;
@@ -18,133 +18,123 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--dark);
       color: var(--light);
-      line-height: 1.6;
-      overflow-x: hidden;
       text-align: center;
+      line-height: 1.4;
+      overflow-x: hidden;
     }
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      padding: 40px 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
     header h1 {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       background: linear-gradient(to right, #fff, var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
     }
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
+    header p { font-size: 1rem; opacity: 0.9; margin-top: 4px; }
+
     .banner-container {
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 15px;
-      margin: 30px auto;
-      max-width: 1400px;
-      padding: 0 20px;
+      margin: 10px auto;
+      max-width: 1200px;
     }
     .banner {
-      width: 220px;
-      height: 200px;
-      border-radius: 12px;
+      width: 180px;
+      height: 120px;
+      border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .banner:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
     .banner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .ads-section {
-      text-align: center;
       background: rgba(255,255,255,0.05);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px auto;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px auto;
       max-width: 900px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     .refresh-btn {
+      margin-top: 10px;
       background: linear-gradient(to right, var(--primary), var(--secondary));
       border: none;
-      border-radius: 40px;
-      padding: 12px 30px;
-      font-size: 1.1rem;
+      border-radius: 30px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
       color: white;
       cursor: pointer;
       font-weight: bold;
-      margin-top: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease;
     }
-    .refresh-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
+    .refresh-btn:hover { transform: scale(1.05); }
+
     .newsletter {
       background: linear-gradient(135deg, var(--secondary), var(--primary));
-      padding: 30px 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      margin: 40px 20px;
-      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
     .newsletter h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 6px;
     }
     .newsletter p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
     }
     .newsletter-form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      max-width: 600px;
+      gap: 8px;
+      max-width: 500px;
       margin: 0 auto;
     }
     .newsletter-form input {
-      padding: 10px 14px;
+      padding: 8px 12px;
       border: none;
-      border-radius: 40px;
-      min-width: 220px;
-      font-size: 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      min-width: 180px;
       outline: none;
     }
     .newsletter-form button {
       background-color: var(--accent);
       color: var(--dark);
       border: none;
-      border-radius: 40px;
-      padding: 10px 20px;
+      border-radius: 30px;
+      padding: 8px 16px;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
     }
-    .newsletter-form button:hover {
-      transform: scale(1.05);
-      background-color: #ffd700;
-    }
+    .newsletter-form button:hover { background-color: #ffd700; }
     footer {
-      text-align: center;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-      margin: 30px 0;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin: 10px 0;
     }
   </style>
 </head>
@@ -187,8 +177,8 @@
   </section>
 
   <section class="newsletter">
-    <h2>Join Our Exclusive Newsletter</h2>
-    <p>Get insider access to tested products and special deals straight to your inbox.</p>
+    <h2>Join Our Newsletter</h2>
+    <p>Get exclusive deals & updates straight to your inbox.</p>
     <form method="post" action="https://www.sendsteed.com/subscribe/" class="newsletter-form">
       <input name="n116667" required type="text" placeholder="Your Name">
       <input name="e116667" required type="email" placeholder="you@example.com">
