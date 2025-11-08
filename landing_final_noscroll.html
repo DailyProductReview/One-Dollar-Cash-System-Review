@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AdVantage Unleashed: Compact No-Scroll View</title>
+  <title>AdVantage Unleashed: Compact Readable Ads</title>
   <style>
     :root {
       --primary: #ff3366;
@@ -68,14 +69,14 @@
     .ads-section {
       background: rgba(255,255,255,0.05);
       border-radius: 10px;
-      padding: 5px;
+      padding: 10px 0 15px;
       margin: 10px auto;
       max-width: 800px;
       font-size: 0.85rem;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     .ads-section iframe, .ads-section div {
-      transform: scale(0.8);
+      transform: scale(0.9);
       transform-origin: top center;
     }
     .refresh-btn {
@@ -83,8 +84,8 @@
       background: linear-gradient(to right, var(--primary), var(--secondary));
       border: none;
       border-radius: 30px;
-      padding: 6px 14px;
-      font-size: 0.8rem;
+      padding: 8px 18px;
+      font-size: 0.9rem;
       color: white;
       cursor: pointer;
       font-weight: bold;
@@ -170,8 +171,8 @@
   </section>
 
   <section class="ads-section">
-    <p>Exclusive Ads — compact view:</p>
-    <div style="transform:scale(0.75);transform-origin:top center;">
+    <p>Exclusive Ads — clearer & readable:</p>
+    <div style="transform:scale(0.9);transform-origin:top center;">
       <script data-cfasync="false">
         ll_r="sandyarta";ll_bc="#ffffff";ll_hc="#e22121";ll_tc="#555a69";ll_cc="#8d9aa6";ll_dc="#8891a8";
         ll_w="";ll_nf="0";ll_nc="1";ll_nh="0";ll_nm="0";ll_np="1";ll_pa="0";ll_nt="0";ll_wt="1";ll_fw="1";
@@ -179,7 +180,9 @@
       </script>
       <script data-cfasync="false" src="https://w.leadsleap.com/js.js"></script>
     </div>
-    <button class="refresh-btn" onclick="window.location.reload()">🔁 Refresh Ads</button>
+    <div>
+      <button class="refresh-btn" onclick="window.location.reload()">🔁 Refresh Ads</button>
+    </div>
   </section>
 
   <section class="newsletter">
