@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Endless Traffic for One Single Dollar!</title>
+    <title>Only $1! Get Endless FREE Traffic Daily!</title>
     <style>
         * {
             margin: 0;
@@ -13,55 +14,65 @@
         }
         
         body {
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
+            background: #0a0015; /* Very dark purple/black */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
         }
         
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            width: 95%;
+            max-width: 900px;
             padding: 20px;
-        }
-        
-        header {
             text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid #333;
         }
         
-        h1 {
-            font-size: 2.8rem;
+        .header {
             margin-bottom: 20px;
-            color: #ff3333;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 51, 51, 0.7);
         }
         
-        .highlight {
-            color: #00ff00;
+        .main-title {
+            font-size: 2.5rem;
+            color: #ff44cc;
+            text-shadow: 0 0 15px #ff44cc, 0 0 30px #ff44cc;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.6rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+            margin-bottom: 15px;
             font-weight: bold;
-            font-size: 1.8rem;
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-            margin: 20px 0;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
         }
         
         .urgency {
-            color: #ff9900;
-            font-size: 1.4rem;
-            margin: 15px 0;
+            color: #ffaa00;
+            font-size: 1.3rem;
+            text-shadow: 0 0 8px #ffaa00;
+            margin: 10px 0;
             font-weight: bold;
         }
         
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
         .features {
-            margin: 40px 0;
+            text-align: left;
+            background: rgba(30, 0, 60, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #6600cc;
+            box-shadow: 0 0 15px rgba(102, 0, 204, 0.5);
         }
         
         .feature-list {
@@ -69,160 +80,242 @@
         }
         
         .feature-list li {
-            padding: 10px 0;
-            font-size: 1.2rem;
-            border-bottom: 1px dashed #333;
+            padding: 6px 0;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 25px;
         }
         
         .feature-list li:before {
-            content: "✓ ";
-            color: #00ff00;
+            content: "✓";
+            color: #00ff88;
             font-weight: bold;
+            position: absolute;
+            left: 0;
+            text-shadow: 0 0 8px #00ff88;
         }
         
         .cta-section {
-            text-align: center;
-            margin: 40px 0;
-            padding: 30px;
-            background: #111;
-            border-radius: 10px;
-            border: 1px solid #333;
+            background: rgba(30, 0, 60, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #6600cc;
+            box-shadow: 0 0 15px rgba(102, 0, 204, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(to bottom, #ff3333, #990000);
+            display: block;
+            background: linear-gradient(to bottom, #ff44cc, #9900cc);
             color: white;
-            padding: 20px 40px;
-            font-size: 1.8rem;
+            padding: 15px 25px;
+            font-size: 1.4rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            text-transform: uppercase;
-            margin: 20px 0;
-            box-shadow: 0 0 20px rgba(255, 51, 51, 0.5);
+            margin: 10px 0;
+            box-shadow: 0 0 20px rgba(255, 68, 204, 0.7);
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
         
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 51, 51, 0.8);
+            box-shadow: 0 0 30px rgba(255, 68, 204, 0.9);
         }
         
         .subscription {
-            margin: 40px 0;
-            padding: 30px;
-            background: #111;
-            border-radius: 10px;
-            border: 1px solid #333;
+            margin-top: 15px;
+            padding: 12px;
+            background: rgba(30, 0, 60, 0.7);
+            border-radius: 8px;
+            border: 1px solid #0099ff;
+            box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
         }
         
         .subscription h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #00ccff;
+            margin-bottom: 10px;
+            color: #00ffff;
+            text-shadow: 0 0 8px #00ffff;
+            font-size: 1.1rem;
         }
         
         .subscription-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            max-width: 400px;
-            margin: 0 auto;
+            gap: 8px;
         }
         
         .subscription-form input {
-            padding: 12px;
-            border: 1px solid #333;
+            padding: 8px;
+            border: 1px solid #330066;
             border-radius: 5px;
-            background: #222;
+            background: #1a0033;
             color: white;
+            font-size: 0.9rem;
         }
         
         .subscription-form button {
-            padding: 12px;
-            background: #00ccff;
+            padding: 8px;
+            background: #0099ff;
             color: #000;
             border: none;
             border-radius: 5px;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
-        }
-        
-        .subscription-form button:hover {
-            background: #0099cc;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid #333;
-            color: #666;
             font-size: 0.9rem;
         }
         
-        @media (max-width: 600px) {
-            h1 {
+        .subscription-form button:hover {
+            background: #00ccff;
+            box-shadow: 0 0 10px rgba(0, 153, 255, 0.7);
+        }
+        
+        .bonus {
+            color: #ffff00;
+            text-shadow: 0 0 8px #ffff00;
+            font-weight: bold;
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            margin-top: 10px;
+            color: #888;
+            font-size: 0.7rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
                 font-size: 2rem;
             }
             
-            .highlight {
-                font-size: 1.4rem;
+            .subtitle {
+                font-size: 1.2rem;
             }
             
             .cta-button {
-                font-size: 1.4rem;
-                padding: 15px 30px;
+                font-size: 1.2rem;
+                padding: 12px 20px;
+            }
+        }
+        
+        @media (max-height: 700px) {
+            .container {
+                transform: scale(0.85);
+            }
+        }
+        
+        @media (max-height: 600px) {
+            .container {
+                transform: scale(0.75);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Get Endless Traffic for One Single Dollar!</h1>
-            <div class="highlight">One Time Payment!</div>
-            <div class="urgency">Offer ends at midnight!</div>
-        </header>
+        <div class="header">
+            <h1 class="main-title">Only $1! Get Endless FREE Traffic Daily!</h1>
+            <div class="subtitle">One Time Payment!</div>
+            <div class="urgency">⚠️ Limited Time Offer - Ends at Midnight!</div>
+        </div>
         
-        <section class="features">
-            <ul class="feature-list">
-                <li>Get FREE Traffic To ANY URL</li>
-                <li>Get daily traffic every day</li>
-                <li>NEW ROTATOR FOR THIS LAUNCH</li>
-                <li>Just submit your links - JOB DONE!</li>
-                <li>Permanent source that never runs dry</li>
-                <li>No Tech Skills Required</li>
-                <li>Works In ANY niche</li>
-                <li>URLS will get traffic EVERY SINGLE DAY</li>
-                <li>Fast Movers will get BEST results...</li>
-            </ul>
-        </section>
+        <div class="content-grid">
+            <div class="features">
+                <ul class="feature-list">
+                    <li>Get FREE Traffic To ANY URL</li>
+                    <li>Get daily traffic every day</li>
+                    <li>NEW ROTATOR FOR THIS LAUNCH</li>
+                    <li>Just submit your links - JOB DONE!</li>
+                    <li>Permanent source that never runs dry</li>
+                    <li>No Tech Skills Required</li>
+                    <li>Works In ANY niche</li>
+                    <li>URLS will get traffic EVERY SINGLE DAY</li>
+                    <li>Fast Movers will get BEST results...</li>
+                </ul>
+            </div>
+            
+            <div class="cta-section">
+                <div class="bonus">BONUS: First 50 buyers get premium placement!</div>
+                <a href="https://warriorplus.com/o2/a/qdtcydr/0/onedollarlandingpage" target="_blank" class="cta-button">GET ENDLESS TRAFFIC NOW!</a>
+                <p>Click the button to claim your $1 traffic source!</p>
+                
+                <div class="subscription">
+                    <h3>Want More Offers Like This?</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 8px;">Subscribe to get notified about future deals!</p>
+                    <form class="subscription-form" method="post" action="https://www.sendsteed.com/subscribe/">
+                        <input name="e116667" required type="email" placeholder="your@email.com">
+                        <input name="n116667" required type="text" placeholder="Your Name">
+                        <input type="hidden" name="lllid" value="116667">
+                        <input type="hidden" name="lluid" value="sandyarta">
+                        <input type="hidden" name="redirect" value="">
+                        <input type="hidden" name="source" value="">
+                        <button type="submit">Notify Me About Future Deals!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         
-        <section class="cta-section">
-            <a href="https://warriorplus.com/o2/a/qdtcydr/0/onedollarlandingpage" target="_blank" class="cta-button">Get Your Endless Traffic Here</a>
-            <p>Click the button above to claim your endless traffic source!</p>
-        </section>
-        
-        <section class="subscription">
-            <h3>Want More Offers Like This?</h3>
-            <p style="text-align: center; margin-bottom: 20px;">Subscribe to get notified about future deals!</p>
-            <form class="subscription-form" method="post" action="https://www.sendsteed.com/subscribe/">
-                <input name="e116667" required type="text" placeholder="your@email.com">
-                <input name="n116667" required type="text" placeholder="Name">
-                <input type="hidden" name="lllid" value="116667">
-                <input type="hidden" name="lluid" value="sandyarta">
-                <input type="hidden" name="redirect" value="">
-                <input type="hidden" name="source" value="">
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-        <footer>
+        <div class="footer">
             <p>© 2023 Endless Traffic Solution. All rights reserved.</p>
-        </footer>
+        </div>
     </div>
+
+    <script>
+        // Add countdown timer for extra urgency
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateCountdown() {
+                const now = new Date();
+                const midnight = new Date();
+                midnight.setHours(24, 0, 0, 0);
+                
+                const diff = midnight - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.querySelector('.urgency').innerHTML = 
+                    `⚠️ Offer Ends In: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            // Adjust layout for different screen sizes
+            function adjustLayout() {
+                const container = document.querySelector('.container');
+                const body = document.body;
+                
+                if (body.scrollHeight > window.innerHeight) {
+                    // Scale down if content is too tall
+                    const scale = Math.min(0.9, window.innerHeight / body.scrollHeight * 0.9);
+                    container.style.transform = `scale(${scale})`;
+                } else {
+                    container.style.transform = 'scale(1)';
+                }
+            }
+            
+            window.addEventListener('resize', adjustLayout);
+            adjustLayout();
+            
+            // Form submission handler
+            const form = document.querySelector('.subscription-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing! You will be notified about future deals.');
+                form.reset();
+            });
+        });
+    </script>
 </body>
 </html>
