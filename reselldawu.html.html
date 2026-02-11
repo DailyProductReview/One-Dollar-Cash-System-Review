@@ -17,102 +17,92 @@
             background: #f9fafc;
             color: #1e293b;
             line-height: 1.5;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1.2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .page {
-            max-width: 1280px;
+            max-width: 1100px;
             width: 100%;
         }
 
-        /* Main title — bold, slightly manipulated/enticing */
+        /* Main title — bold, manipulated/enticing */
         h1 {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             line-height: 1.2;
             text-align: center;
             color: #0f172a;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             text-shadow: 0 4px 12px rgba(0,20,50,0.03);
             word-break: break-word;
         }
 
         .title-accent {
             display: block;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: #2563eb;
-            margin-top: 0.25rem;
+            margin-top: 0.2rem;
             background: linear-gradient(145deg, #1e40af, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        /* subtitle / enticer */
         .sub {
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 400;
             color: #475569;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 1.5rem;
-            max-width: 800px;
+            padding-bottom: 1.2rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* TWO-COLUMN LAYOUT for images */
+        /* ZWEI BILDER - DEUTLICH KLEINER */
         .image-panel {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .image-card {
-            flex: 1 1 300px;
-            min-width: 280px;
-            max-width: 550px;
+            flex: 0 1 280px;  /* FIXED KLEINER: max 280px breit */
+            min-width: 240px;
+            max-width: 300px;
             display: flex;
             flex-direction: column;
             background: white;
-            border-radius: 28px;
-            padding: 1.5rem 1.5rem 1.8rem;
-            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.04), 0 8px 10px -6px rgba(0,0,0,0.02);
-            transition: all 0.2s ease;
+            border-radius: 20px;
+            padding: 1rem 1rem 1.2rem;
+            box-shadow: 0 15px 25px -10px rgba(0,0,0,0.04);
             border: 1px solid rgba(255,255,255,0.5);
-            backdrop-filter: blur(2px);
-        }
-
-        .image-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 45px -12px rgba(37,99,235,0.12);
-            border-color: #b1c5f0;
         }
 
         .image-link {
             display: block;
-            border-radius: 18px;
+            border-radius: 14px;
             overflow: hidden;
             background: #f1f5f9;
-            transition: 0.15s;
             border: 1px solid #e9eef3;
+            height: 160px;  /* FESTE HÖHE - BILDER VIEL KLEINER */
         }
 
         .image-link img {
             display: block;
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 10;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
         .image-link:hover img {
@@ -120,40 +110,39 @@
         }
 
         .image-caption {
-            margin-top: 1rem;
+            margin-top: 0.7rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: #0f172a;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.3rem;
         }
 
         .image-caption span {
             background: #e6f0ff;
-            padding: 0.2rem 0.6rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 40px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #2563eb;
             text-transform: uppercase;
-            letter-spacing: 0.03em;
         }
 
         /* RESELLER TABLE — clean, modern */
         .reseller-section {
             background: white;
-            border-radius: 36px;
-            padding: 2.5rem 1.8rem;
-            margin: 2rem 0 1.5rem;
-            box-shadow: 0 12px 30px -10px rgba(0,0,0,0.05);
+            border-radius: 28px;
+            padding: 1.8rem 1.5rem;
+            margin: 1.5rem 0 1rem;
+            box-shadow: 0 12px 25px -10px rgba(0,0,0,0.05);
             border: 1px solid #f0f4fe;
         }
 
         .section-title {
-            font-size: 1.9rem;
+            font-size: 1.7rem;
             font-weight: 700;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             display: flex;
             align-items: baseline;
             flex-wrap: wrap;
@@ -162,34 +151,34 @@
         }
 
         .section-title small {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 400;
             color: #4b5565;
             background: #f2f6fd;
-            padding: 0.2rem 1rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 40px;
-            margin-left: 0.5rem;
+            margin-left: 0.3rem;
         }
 
         .profit-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .profit-table th {
             text-align: left;
-            padding: 1rem 0.8rem 0.6rem 0;
+            padding: 0.8rem 0.6rem 0.5rem 0;
             font-weight: 600;
             color: #2c3e50;
             border-bottom: 2px solid #dce7f5;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.04em;
         }
 
         .profit-table td {
-            padding: 1rem 0.8rem 1rem 0;
+            padding: 0.8rem 0.6rem 0.8rem 0;
             border-bottom: 1px solid #ecf1f7;
             font-weight: 450;
         }
@@ -200,7 +189,7 @@
 
         .highlight-row {
             background: #fff9eb;
-            border-radius: 16px;
+            border-radius: 12px;
         }
 
         .highlight-row td {
@@ -212,9 +201,9 @@
             background: #dcfce7;
             color: #166534;
             font-weight: 600;
-            padding: 0.2rem 0.8rem;
+            padding: 0.2rem 0.7rem;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             display: inline-block;
         }
 
@@ -223,21 +212,21 @@
             color: #0f172a;
         }
 
-        /* special offer CTA */
+        /* SPECIAL OFFER - EXTRA HERVORGEHOBEN */
         .special-offer {
-            margin-top: 2rem;
-            padding: 1.6rem 2rem;
+            margin-top: 1.5rem;
+            padding: 1.2rem 1.5rem;
             background: linear-gradient(105deg, #fbe9f0 0%, #fff4ed 100%);
-            border-radius: 28px;
+            border-radius: 20px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            border-left: 8px solid #b4536b;
+            border-left: 6px solid #b4536b;
         }
 
         .offer-text {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #270c1b;
         }
@@ -245,31 +234,31 @@
         .offer-price {
             background: #1e293b;
             color: white;
-            padding: 0.45rem 1.6rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 100px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             display: inline-block;
             letter-spacing: -0.01em;
-            box-shadow: 0 8px 14px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
         }
 
-        /* micro */
         .footnote {
             color: #5e6f8c;
-            margin-top: 2rem;
-            font-size: 0.9rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
             text-align: center;
             border-top: 1px solid #dfe7f0;
-            padding-top: 1.8rem;
+            padding-top: 1.5rem;
         }
 
         /* responsive */
         @media (max-width: 700px) {
-            h1 { font-size: 2rem; }
-            .title-accent { font-size: 1.4rem; }
-            .sub { font-size: 1.1rem; }
-            .section-title { font-size: 1.6rem; }
+            h1 { font-size: 1.9rem; }
+            .title-accent { font-size: 1.3rem; }
+            .sub { font-size: 1rem; }
+            .section-title { font-size: 1.4rem; }
+            .image-card { flex: 0 1 260px; }
         }
     </style>
 </head>
@@ -284,48 +273,44 @@
             ⚡ choose your path — both proven. pick one, click the pic, start now.
         </div>
 
-        <!-- TWO CLICKABLE IMAGES SIDE BY SIDE (left / right) -->
+        <!-- ZWEI BILDER - JETZT VIEL KLEINER, TEXT DARUNTER SOFORT SICHTBAR -->
         <div class="image-panel">
-            <!-- LEFT IMAGE CARD -->
+            <!-- LINKES BILD - KORREKTER LINK JETZT EINGESETZT -->
             <div class="image-card">
-                <a href="YOUR_CORRECT_LINK_HERE" target="_blank" rel="noopener noreferrer" class="image-link">
+                <a href="https://trafficpostingzone.com/%f0%9f%94%a5-one-dollar-solo-ads-the-only-1-investment-youll-ever-need-2/" target="_blank" rel="noopener noreferrer" class="image-link">
                     <img 
                         src="https://trafficpostingzone.com/wp-content/uploads/2026/02/ChatGPT-Image-10.-Jan.-2026-13_53_04.png" 
                         alt="One Dollar Solo Ads - The only $1 investment" 
                         loading="lazy"
-                        onerror="this.style.background='#e2e8f0'; this.src='data:image/svg+xml,<svg ...>'"
                     >
                 </a>
                 <div class="image-caption">
                     🔥 ONE DOLLAR SOLO ADS <span>#1 pick</span>
                 </div>
-                <p style="color: #3b4e66; margin-top: 0.2rem; font-size: 0.95rem;">
+                <p style="color: #3b4e66; margin-top: 0.1rem; font-size: 0.85rem;">
                     The only $1 investment — click, start, scale.
                 </p>
             </div>
 
-            <!-- RIGHT IMAGE CARD -->
+            <!-- RECHTES BILD -->
             <div class="image-card">
                 <a href="https://trafficpostingzone.com/one-dollar-traffic-time-review/" target="_blank" rel="noopener noreferrer" class="image-link">
                     <img 
                         src="https://trafficpostingzone.com/wp-content/uploads/2026/02/Screenshot-2026-02-11-at-12-07-12-Bild-fur-Review-Anfrage.png" 
                         alt="One Dollar Traffic Time Review" 
                         loading="lazy"
-                        onerror="this.style.background='#f1f5f9'"
                     >
                 </a>
                 <div class="image-caption">
                     ⏱️ ONE DOLLAR TRAFFIC TIME <span>review</span>
                 </div>
-                <p style="color: #3b4e66; margin-top: 0.2rem; font-size: 0.95rem;">
+                <p style="color: #3b4e66; margin-top: 0.1rem; font-size: 0.85rem;">
                     Turn $1 into traffic. Full review inside.
                 </p>
             </div>
         </div>
 
-        <!-- ######################################## -->
-        <!-- RESELLER RIGHTS TABLE (exact as requested) -->
-        <!-- ######################################## -->
+        <!-- RESELLER RIGHTS TABLE - JETZT DIREKT UNTER DEN KLEINEN BILDERN SICHTBAR -->
         <div class="reseller-section">
             <div class="section-title">
                 💎 What You Keep With Reseller Rights
@@ -366,40 +351,37 @@
                         <td class="price">$47.00</td>
                         <td><span class="profit-badge">$47.00 (100%)</span></td>
                     </tr>
-                    <!-- **** HIGHLIGHTED ROW: Reseller Rights DS for $27 **** -->
+                    <!-- HIGHLIGHTED: Reseller Rights DS für $27 -->
                     <tr class="highlight-row">
-                        <td><strong style="font-size: 1.05rem;">Reseller Rights DS</strong> ⭐</td>
+                        <td><strong>Reseller Rights DS</strong> ⭐</td>
                         <td class="price"><strong>$27.00</strong></td>
                         <td><span class="profit-badge" style="background: #fef9c3; color: #854d0e;">$27.00 (100%)</span></td>
                     </tr>
                 </tbody>
             </table>
 
-            <!-- SPECIAL OFFER MESSAGE: exactly "reseller rights für n8r 27 dollar nimm das Reseller Rights DS" adapted in english -->
+            <!-- SPECIAL OFFER: exakt wie gewünscht - Reseller Rights DS für $27 -->
             <div class="special-offer">
                 <span class="offer-text">
-                    🎯 reseller rights · only <strong style="background: white; padding: 0.15rem 0.5rem; border-radius: 20px;">$27</strong> 
+                    🎯 reseller rights · only <strong style="background: white; padding: 0.1rem 0.5rem; border-radius: 20px;">$27</strong> 
                 </span>
                 <span class="offer-price">
                     take Reseller Rights DS
                 </span>
             </div>
-            <p style="font-size: 1rem; margin-top: 0.75rem; color: #2d3c4b; font-weight: 500; background: rgba(255,215,0,0.1); padding: 0.5rem 1rem; border-radius: 60px; display: inline-block;">
-                ⚡ exactly that: <strong>Reseller Rights DS for only $27</strong> — your profit 100% · the $1 way to start
+            <p style="font-size: 0.95rem; margin-top: 0.7rem; color: #2d3c4b; font-weight: 600; background: rgba(255,215,0,0.1); padding: 0.4rem 1rem; border-radius: 50px; display: inline-block;">
+                ⚡ <strong>Reseller Rights DS for only $27</strong> — 100% profit · start with $1
             </p>
         </div>
 
-        <!-- subtle footnote / trust -->
         <div class="footnote">
             🚀 start with one dollar. both offers reviewed. click any image — opens in new window.
-            <br style="margin-bottom: 0.5rem;">
-            <span style="opacity: 0.7;">* left link needs correct placement – you’ll replace the placeholder.</span>
         </div>
     </div>
 
-    <!-- small note: placeholder reminder inline (visible only as tiny helper) -->
-    <div style="font-size: 0.8rem; margin-top: 1.5rem; background: #fff1e0; padding: 0.5rem 1.2rem; border-radius: 50px; color: #713f12;">
-        ⚠️ reminder: the left image href="YOUR_CORRECT_LINK_HERE" — please update with actual $1 solo ads url.
+    <!-- KLEINE BESTÄTIGUNG: LINK IST KORREKT -->
+    <div style="font-size: 0.75rem; margin-top: 1rem; background: #e6f0ff; padding: 0.4rem 1.2rem; border-radius: 50px; color: #1e3a8a;">
+        ✅ left image link active: One Dollar Solo Ads · right image link active: Traffic Time Review
     </div>
 </body>
 </html>
