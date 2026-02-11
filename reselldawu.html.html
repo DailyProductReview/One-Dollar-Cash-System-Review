@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Only $1 Investment You’ll Ever Need</title>
+    <style>
+        /* Modern, clean reset & base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafc;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        /* Main title — bold, slightly manipulated/enticing */
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            text-align: center;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 4px 12px rgba(0,20,50,0.03);
+            word-break: break-word;
+        }
+
+        .title-accent {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2563eb;
+            margin-top: 0.25rem;
+            background: linear-gradient(145deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* subtitle / enticer */
+        .sub {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #475569;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* TWO-COLUMN LAYOUT for images */
+        .image-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .image-card {
+            flex: 1 1 300px;
+            min-width: 280px;
+            max-width: 550px;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 28px;
+            padding: 1.5rem 1.5rem 1.8rem;
+            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.04), 0 8px 10px -6px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 45px -12px rgba(37,99,235,0.12);
+            border-color: #b1c5f0;
+        }
+
+        .image-link {
+            display: block;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #f1f5f9;
+            transition: 0.15s;
+            border: 1px solid #e9eef3;
+        }
+
+        .image-link img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-link:hover img {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .image-caption span {
+            background: #e6f0ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        /* RESELLER TABLE — clean, modern */
+        .reseller-section {
+            background: white;
+            border-radius: 36px;
+            padding: 2.5rem 1.8rem;
+            margin: 2rem 0 1.5rem;
+            box-shadow: 0 12px 30px -10px rgba(0,0,0,0.05);
+            border: 1px solid #f0f4fe;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            color: #0a2540;
+        }
+
+        .section-title small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4b5565;
+            background: #f2f6fd;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin-left: 0.5rem;
+        }
+
+        .profit-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+
+        .profit-table th {
+            text-align: left;
+            padding: 1rem 0.8rem 0.6rem 0;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #dce7f5;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .profit-table td {
+            padding: 1rem 0.8rem 1rem 0;
+            border-bottom: 1px solid #ecf1f7;
+            font-weight: 450;
+        }
+
+        .profit-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-row {
+            background: #fff9eb;
+            border-radius: 16px;
+        }
+
+        .highlight-row td {
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+
+        .profit-badge {
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 600;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* special offer CTA */
+        .special-offer {
+            margin-top: 2rem;
+            padding: 1.6rem 2rem;
+            background: linear-gradient(105deg, #fbe9f0 0%, #fff4ed 100%);
+            border-radius: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 8px solid #b4536b;
+        }
+
+        .offer-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #270c1b;
+        }
+
+        .offer-price {
+            background: #1e293b;
+            color: white;
+            padding: 0.45rem 1.6rem;
+            border-radius: 100px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: inline-block;
+            letter-spacing: -0.01em;
+            box-shadow: 0 8px 14px rgba(0,0,0,0.05);
+        }
+
+        /* micro */
+        .footnote {
+            color: #5e6f8c;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            text-align: center;
+            border-top: 1px solid #dfe7f0;
+            padding-top: 1.8rem;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            h1 { font-size: 2rem; }
+            .title-accent { font-size: 1.4rem; }
+            .sub { font-size: 1.1rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- MAIN TITLE: manipulated, punchy, with "Only $1" core -->
+        <h1>
+            The Only $1 Investment You’ll Ever Need
+            <span class="title-accent">start your business for one dollar</span>
+        </h1>
+        <div class="sub">
+            ⚡ choose your path — both proven. pick one, click the pic, start now.
+        </div>
+
+        <!-- TWO CLICKABLE IMAGES SIDE BY SIDE (left / right) -->
+        <div class="image-panel">
+            <!-- LEFT IMAGE CARD -->
+            <div class="image-card">
+                <a href="YOUR_CORRECT_LINK_HERE" target="_blank" rel="noopener noreferrer" class="image-link">
+                    <img 
+                        src="https://trafficpostingzone.com/wp-content/uploads/2026/02/ChatGPT-Image-10.-Jan.-2026-13_53_04.png" 
+                        alt="One Dollar Solo Ads - The only $1 investment" 
+                        loading="lazy"
+                        onerror="this.style.background='#e2e8f0'; this.src='data:image/svg+xml,<svg ...>'"
+                    >
+                </a>
+                <div class="image-caption">
+                    🔥 ONE DOLLAR SOLO ADS <span>#1 pick</span>
+                </div>
+                <p style="color: #3b4e66; margin-top: 0.2rem; font-size: 0.95rem;">
+                    The only $1 investment — click, start, scale.
+                </p>
+            </div>
+
+            <!-- RIGHT IMAGE CARD -->
+            <div class="image-card">
+                <a href="https://trafficpostingzone.com/one-dollar-traffic-time-review/" target="_blank" rel="noopener noreferrer" class="image-link">
+                    <img 
+                        src="https://trafficpostingzone.com/wp-content/uploads/2026/02/Screenshot-2026-02-11-at-12-07-12-Bild-fur-Review-Anfrage.png" 
+                        alt="One Dollar Traffic Time Review" 
+                        loading="lazy"
+                        onerror="this.style.background='#f1f5f9'"
+                    >
+                </a>
+                <div class="image-caption">
+                    ⏱️ ONE DOLLAR TRAFFIC TIME <span>review</span>
+                </div>
+                <p style="color: #3b4e66; margin-top: 0.2rem; font-size: 0.95rem;">
+                    Turn $1 into traffic. Full review inside.
+                </p>
+            </div>
+        </div>
+
+        <!-- ######################################## -->
+        <!-- RESELLER RIGHTS TABLE (exact as requested) -->
+        <!-- ######################################## -->
+        <div class="reseller-section">
+            <div class="section-title">
+                💎 What You Keep With Reseller Rights
+                <small>100% profit margin</small>
+            </div>
+
+            <table class="profit-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Sale Price</th>
+                        <th>Your Profit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Massive Traffic Bundle</td>
+                        <td class="price">$97.00</td>
+                        <td><span class="profit-badge">$97.00 (100%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Massive Traffic Bundle DS</td>
+                        <td class="price">$47.00</td>
+                        <td><span class="profit-badge">$47.00 (100%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>New Executive Club</td>
+                        <td class="price">$37.00</td>
+                        <td><span class="profit-badge">$37.00 (100%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>PRO Version</td>
+                        <td class="price">$27.00</td>
+                        <td><span class="profit-badge">$27.00 (100%)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Reseller Rights</td>
+                        <td class="price">$47.00</td>
+                        <td><span class="profit-badge">$47.00 (100%)</span></td>
+                    </tr>
+                    <!-- **** HIGHLIGHTED ROW: Reseller Rights DS for $27 **** -->
+                    <tr class="highlight-row">
+                        <td><strong style="font-size: 1.05rem;">Reseller Rights DS</strong> ⭐</td>
+                        <td class="price"><strong>$27.00</strong></td>
+                        <td><span class="profit-badge" style="background: #fef9c3; color: #854d0e;">$27.00 (100%)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SPECIAL OFFER MESSAGE: exactly "reseller rights für n8r 27 dollar nimm das Reseller Rights DS" adapted in english -->
+            <div class="special-offer">
+                <span class="offer-text">
+                    🎯 reseller rights · only <strong style="background: white; padding: 0.15rem 0.5rem; border-radius: 20px;">$27</strong> 
+                </span>
+                <span class="offer-price">
+                    take Reseller Rights DS
+                </span>
+            </div>
+            <p style="font-size: 1rem; margin-top: 0.75rem; color: #2d3c4b; font-weight: 500; background: rgba(255,215,0,0.1); padding: 0.5rem 1rem; border-radius: 60px; display: inline-block;">
+                ⚡ exactly that: <strong>Reseller Rights DS for only $27</strong> — your profit 100% · the $1 way to start
+            </p>
+        </div>
+
+        <!-- subtle footnote / trust -->
+        <div class="footnote">
+            🚀 start with one dollar. both offers reviewed. click any image — opens in new window.
+            <br style="margin-bottom: 0.5rem;">
+            <span style="opacity: 0.7;">* left link needs correct placement – you’ll replace the placeholder.</span>
+        </div>
+    </div>
+
+    <!-- small note: placeholder reminder inline (visible only as tiny helper) -->
+    <div style="font-size: 0.8rem; margin-top: 1.5rem; background: #fff1e0; padding: 0.5rem 1.2rem; border-radius: 50px; color: #713f12;">
+        ⚠️ reminder: the left image href="YOUR_CORRECT_LINK_HERE" — please update with actual $1 solo ads url.
+    </div>
+</body>
+</html>
