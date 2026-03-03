@@ -1,333 +1,299 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REACH OVER 40,000 BUYERS DAILY | Limited Time Offer</title>
+    <title>Premium suite · high-conviction tools</title>
+    <!-- professional & trustworthy color story: deep navy, subtle gradients, elegant card tones -->
     <style>
         * {
             margin: 0;
-            padding: 0; 
+            padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: #fff;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background: #0b1a2f;  /* rich, deep navy – trustworthy, calm, premium */
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            padding: 2.2rem 1.8rem;
+            color: #eef4ff;
         }
-        
-        .container {
-            max-width: 1200px;
+
+        /* subtle noise texture for depth (manipulative = sensory richness) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 30%),
+                              radial-gradient(circle at 80% 70%, rgba(100, 180, 255, 0.03) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrap {
+            max-width: 1360px;
             margin: 0 auto;
-            padding: 20px;
-            flex: 1;
+            position: relative;
+            z-index: 2;
         }
-        
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-        
-        .pricing {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin: 15px 0;
-        }
-        
-        .old-price {
-            font-size: 24px;
-            text-decoration: line-through;
-            color: #ccc;
-        }
-        
-        .sale-price {
-            font-size: 42px;
-            font-weight: bold;
-            color: #ffcc00;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .sale-badge {
-            background: #ff3333;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .countdown {
-            background: rgba(0,0,0,0.3);
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 15px 0;
-            font-size: 18px;
-        }
-        
-        .countdown-highlight {
-            color: #ffcc00;
-            font-weight: bold;
-        }
-        
+
+        /* refined headline with soft glow */
         h1 {
-            font-size: 36px;
-            margin: 15px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 2.4rem;
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0, 20, 40, 0.7);
+            border-left: 5px solid #3f8cff;
+            padding-left: 1.8rem;
+            background: linear-gradient(135deg, #ffffff 0%, #c7dcff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
         }
-        
-        h2 {
-            font-size: 28px;
-            margin: 10px 0;
-            color: #ffcc00;
+        /* fallback */
+        h1 span {
+            background: none;
+            color: white;
         }
-        
-        .content-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 20px 0;
-        }
-        
-        .benefits {
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 25px;
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .benefits-columns {
+
+        /* card grid */
+        .card-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem 1.8rem;
         }
-        
-        .benefits ul {
-            list-style-type: none;
-        }
-        
-        .benefits li {
-            padding: 8px 0;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .benefits li:before {
-            content: "✓";
-            color: #4CAF50;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-        
-        .email-section {
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            padding: 25px;
-            min-width: 300px;
-            flex: 0 0 300px;
-        }
-        
-        .email-form {
+
+        /* --- cards with elevated, trustworthy look --- */
+        .product-card {
+            background: rgba(18, 30, 45, 0.85);    /* deep blue‑grey, semi‑translucent for depth */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(110, 165, 255, 0.25);
+            border-radius: 36px;                   /* smoother, more luxurious rounding */
+            padding: 2rem 1.8rem 2.2rem 1.8rem;
+            box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+            transition: all 0.25s ease;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            color: #eef2f8;
         }
-        
-        .email-form input {
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
-            font-size: 16px;
+
+        .product-card:hover {
+            border-color: #4b9eff;
+            box-shadow: 0 40px 55px -20px #000d1f, 0 0 0 1px #3f8cff80 inset;
+            transform: translateY(-6px);
+            background: rgba(22, 38, 55, 0.9);
         }
-        
-        .email-form button {
-            background: linear-gradient(to right, #00b09b, #96c93d);
-            color: white;
-            padding: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+
+        /* titles: elegant, solid white with subtle glow */
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+            text-shadow: 0 2px 6px #002a5e;
+            letter-spacing: -0.01em;
+            border-bottom: 2px solid rgba(79, 145, 255, 0.4);
+            padding-bottom: 0.6rem;
         }
-        
-        .email-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+        /* description field: light, airy, still very readable */
+        .product-description {
+            font-size: 1.05rem;
+            color: #d5e5ff;
+            margin-bottom: 1.8rem;
+            flex: 1;
+            background: rgba(0, 25, 50, 0.3);
+            padding: 1.2rem 1.4rem;
+            border-radius: 24px;
+            border: 1px solid #2d4d7a;
+            backdrop-filter: blur(4px);
+            line-height: 1.6;
+            box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.4);
         }
-        
-        .cta-section {
-            text-align: center;
-            padding: 20px 0;
+
+        .product-description strong {
+            color: #ffdb9d;         /* soft gold for emphasis – manipulative highlight */
+            font-weight: 600;
         }
-        
-        .cta-button {
+
+        /* button area */
+        .card-footer {
+            margin-top: 0.5rem;
+        }
+
+        .affiliate-btn {
             display: inline-block;
-            background: linear-gradient(to right, #ff8a00, #da1b60);
+            width: 100%;
+            background: linear-gradient(155deg, #255ec9, #153e7c);
             color: white;
-            padding: 18px 40px;
-            font-size: 22px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 15px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 1rem 1.2rem;
             border: none;
-            cursor: pointer;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-        
-        .secondary-button {
-            display: inline-block;
-            background: linear-gradient(to right, #00b09b, #96c93d);
-            color: white;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .secondary-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-        
-        .guarantee {
+            border-radius: 60px;
             text-align: center;
-            font-style: italic;
-            margin: 15px 0;
-            opacity: 0.9;
+            text-decoration: none;
+            box-shadow: 0 15px 25px -10px #020b1a, 0 3px 0 0 #3b6bcb inset, 0 -2px 0 0 #001b4b inset;
+            transition: all 0.18s;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            text-transform: uppercase;
+            font-size: 1.1rem;
         }
-        
+
+        .affiliate-btn:hover {
+            background: linear-gradient(145deg, #2f6cde, #1c48a0);
+            box-shadow: 0 22px 30px -12px #000f2b, 0 4px 0 0 #4f8cff inset, 0 -2px 0 0 #001a4f inset;
+            scale: 1.01;
+            color: #ffffff;
+            border-color: #c3dbff;
+        }
+
+        .affiliate-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 10px 18px -10px #000000, 0 2px 0 0 #2b5bb5 inset;
+        }
+
+        /* footnote */
         footer {
+            margin-top: 4rem;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
-            opacity: 0.7;
-            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #98b2d9;
+            border-top: 1px solid #234872;
+            padding-top: 2rem;
+            text-shadow: 0 1px 3px black;
         }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
-            
-            h2 {
-                font-size: 24px;
-            }
-            
-            .sale-price {
-                font-size: 32px;
-            }
-            
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 20px;
-            }
-            
-            .benefits-columns {
-                grid-template-columns: 1fr;
-            }
-            
-            .content-section {
-                flex-direction: column;
-            }
-            
-            .email-section {
-                flex: 1;
-            }
+
+        /* small responsive touches */
+        @media (max-width: 600px) {
+            body { padding: 1.4rem; }
+            h1 { font-size: 2rem; }
+            .product-title { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="pricing">
-                <span class="old-price">$197.00</span>
-                <span class="sale-price">$5.00 ONE TIME ONLY!</span>
-                <span class="sale-badge">SALE</span>
+<div class="page-wrap">
+    <h1>✦ authority intelligence · turn‑key systems</h1>
+
+    <div class="card-grid">
+        <!-- 1. OpenClaw Blaster -->
+        <div class="product-card">
+            <div class="product-title">OpenClaw Blaster</div>
+            <div class="product-description">
+                <strong>Automated AI Content That Actually Works.</strong> AI tools steal your time instead of saving it—logging in, writing prompts, editing, repeating every day. OpenClaw Blaster does it all automatically: blogs, social posts, videos, images, and emails grow on their own, building traffic, engagement, and authority while you sit back and relax.
             </div>
-            
-            <div class="countdown">
-                <p>Offer ends at <span class="countdown-highlight">Midnight!</span></p>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/g7r106k/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
             </div>
-            
-            <h1>HOW WOULD YOU LIKE TO REACH...</h1>
-            <h2>OVER 40,000 BUYERS EVERY DAY?</h2>
-            <p>THE ULTIMATE OPPORTUNITY TO REACH 40K BUYERS</p>
-        </header>
-        
-        <div class="content-section">
-            <section class="benefits">
-                <div class="benefits-columns">
-                    <ul>
-                        <li>Your URL mailed to OVER 40k Members DAILY</li>
-                        <li>Sent Out DAILY to all 25 of my MMO websites & MORE</li>
-                        <li>Sent Out DAILY to all who buy this product</li>
-                        <li>Submit any URL in any niche</li>
-                        <li>Sent Out WEEKLY to my MAIN EMAIL LIST</li>
-                    </ul>
-                    <ul>
-                        <li>Crazy value for under $10</li>
-                        <li>Absolutely NO Bot Traffic Clicks</li>
-                        <li>This Package NEVER OFFERED BEFORE</li>
-                        <li>Includes 1000's of proven buyers</li>
-                        <li>Free squeeze pages included</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <section class="email-section">
-                <h3>Want More Offers Like This?</h3>
-                <p>Subscribe to get notified about future deals!</p>
-                <form class="email-form" method="post" action="https://www.sendsteed.com/subscribe/">
-                    <input name="e115811" required type="text" placeholder="your@email.com">
-                    <input name="n115811" required type="text" placeholder="Your Name">
-                    <input type="hidden" name="lllid" value="115811">
-                    <input type="hidden" name="lluid" value="sandyarta">
-                    <input type="hidden" name="redirect" value="">
-                    <input type="hidden" name="source" value="">
-                    <button type="submit">Subscribe for More Offers</button>
-                </form>
-            </section>
         </div>
-        
-        <section class="cta-section">
-            <a href="https://warriorplus.com/o2/a/xl1s0xk/0/landingneu" class="cta-button">
-                BUY NOW & REACH BUYERS
-            </a>
-            <br>
-            <a href="https://warriorplus.com/o2/a/xl1s0xk/0/landingneu" class="cta-button">
-                SEND YOUR LINK TO BUYERS HERE
-            </a>
-            
-            <p class="guarantee">Limited Time Offer - Only $5.00 Today!</p>
-        </section>
-        
-        <footer>
-            <p></p>
-        </footer>
+
+        <!-- 2. One-Page Money System -->
+        <div class="product-card">
+            <div class="product-title">One-Page Money System</div>
+            <div class="product-description">
+                <strong>Turn Any Content Into Ready-to-Sell Money Pages Instantly.</strong> Most content never converts because selling points are scattered and pages aren’t finished. The <strong>1-Page Money System</strong> fixes that: paste any content, and it instantly creates a fully structured, ready-to-deploy money page that converts, builds trust, and can be used for clients, PLR, or your own offers—no rewriting, no guesswork. Bonuses like ready-to-use sales copy, emails, social posts, and video scripts make launching and profiting fast and effortless.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/p7wkf88/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 3. AI Prompt Engineering Mastery -->
+        <div class="product-card">
+            <div class="product-title">AI Prompt Engineering Mastery</div>
+            <div class="product-description">
+                <strong>Launch & Profit Instantly with PLR.</strong> Turn Any AI Content Into Cash—Instantly! This Done-For-You PLR gives you a full, ready-to-sell AI Prompt Engineering course. Teach people how to write high-impact prompts, automate workflows, create content, and monetize AI—without coding or tech headaches. Rebrand, launch, and profit immediately. One click, total authority, endless income potential. <strong>Don’t create—cash in.</strong>
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/bjgqjn7/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 4. AI Elite Coach Bundle -->
+        <div class="product-card">
+            <div class="product-title">AI Elite Coach Bundle</div>
+            <div class="product-description">
+                <strong>Turn $27 Into Your Personal AI Marketing Dream Team.</strong> Stop wasting hundreds on AI tools that underdeliver. With AI Coach Elite Bundle, you get 4 expert-level AI coaches trained to drive traffic, monetize KDP books, optimize Pinterest, and model recurring revenue—without limits, fees, or API keys. Instant access. Step-by-step guidance. Real results in days. Lock in this insane dimesale before it’s gone. Your traffic, income, and content creation just got turbocharged.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/s3h0djt/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 5. AI-Powered KDP Cash Engine -->
+        <div class="product-card">
+            <div class="product-title">AI-Powered KDP Cash Engine</div>
+            <div class="product-description">
+                <strong>Problem:</strong> Most people publish blind, end up with dead books, wasted time, and zero sales.<br>
+                <strong>Benefit:</strong> The AI KDP Cash Engine turns demand into a structured book, optimized listing, and early momentum — so your books sell faster, without guesswork or burnout. $17 one-time. No luck, just execution.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/jz14vch/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 6. Easy AI PLR Transformer System -->
+        <div class="product-card">
+            <div class="product-title">Easy AI PLR Transformer</div>
+            <div class="product-description">
+                <strong>Problem:</strong> Most people want to create products but get stuck with blank pages, confusing PLR, or generic AI content — wasting hours with nothing to sell.<br>
+                <strong>Benefit:</strong> The Easy AI PLR Transformer turns any PLR into a unique, polished product in hours, ready to sell with full PLR rights — no starting from scratch, no guesswork, just fast results.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/sxxb4mh/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 7. Affiliate Prompt Lab -->
+        <div class="product-card">
+            <div class="product-title">Affiliate Prompt Lab</div>
+            <div class="product-description">
+                <strong>Problem:</strong> Most aspiring affiliates get stuck guessing niches, content, and strategies, wasting time and energy with little to show for it.<br>
+                <strong>Benefit:</strong> Affiliate Prompt Lab guides you step-by-step to create high-converting affiliate campaigns automatically, using AI to generate content, headlines, and emails — all from any device, with zero product creation or customer support required.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/h0s0y6r/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 8. Easy Prompt Creator Pro -->
+        <div class="product-card">
+            <div class="product-title">Easy Prompt Creator Pro</div>
+            <div class="product-description">
+                <strong>Create Prompts From Scratch.</strong> <strong>Problem:</strong> Most people struggle to create AI prompts because it feels confusing, technical, and intimidating — and finding good prompts online wastes time and yields inconsistent results.<br>
+                <strong>Benefit:</strong> Easy Prompt Creator Pro lets anyone instantly generate unlimited professional AI prompts for any purpose — from content and emails to products and social posts — with zero technical skill required. Just type a simple idea, and AI does the rest, letting you sell, give away, or use prompts to grow your business effortlessly.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/mwwxyql/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
+
+        <!-- 9. Book Ninja -->
+        <div class="product-card">
+            <div class="product-title">Book Ninja</div>
+            <div class="product-description">
+                <strong>Problem:</strong> Making passive income through Amazon KDP usually takes hours of research, content creation, formatting, and design. Most beginners get stuck, overwhelmed, or end up guessing which books will sell.<br>
+                <strong>Benefit:</strong> <strong>Book Ninja</strong> turns anyone into a passive income creator in minutes. It automatically finds trending niches, builds mid-content or non-fiction books (interiors + covers), formats them for Amazon, and lets you upload directly. No writing, designing, or marketing needed. Each book becomes a digital asset that can generate royalties on Amazon and multiple other marketplaces — creating real, ongoing income with minimal effort.
+            </div>
+            <div class="card-footer">
+                <a href="https://warriorplus.com/o2/a/bm5vr3x/0" class="affiliate-btn" target="_blank" rel="noopener nofollow">claim edge →</a>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        ⚡ each solution is a click away — secure, trusted affiliate links · instant access
+    </footer>
+</div>
 </body>
 </html>
