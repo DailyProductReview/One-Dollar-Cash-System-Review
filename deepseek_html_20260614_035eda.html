@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Forget ClickBank | $10k Per Sale Platform</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff0055 0%, #ff6600 50%, #ffcc00 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(2px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* shine animation */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+            transform: rotate(45deg);
+            animation: shine 7s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+            font-weight: 900;
+            word-break: keep-all;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            font-size: 2.7rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFE66D, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            display: inline-block;
+            margin: 20px 0;
+            animation: pulse 2.2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.95; }
+        }
+
+        .form-container {
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* email input styling - consistent with new code using text/email */
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 15px 22px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.15rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #1e1e2a;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+            transition: all 0.25s ease;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            background-color: #ffffff;
+            box-shadow: 0 8px 22px rgba(255, 200, 50, 0.5);
+            transform: translateY(-2px);
+            border: 1px solid #ffcc00;
+        }
+
+        .inbox-text {
+            font-size: 1.25rem;
+            margin: 15px 0 20px;
+            font-weight: bold;
+            color: #ffdd77;
+            text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+            background: rgba(0,0,0,0.3);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
+        }
+
+        button {
+            width: 100%;
+            padding: 18px 20px;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.35rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(105deg, #00cc66, #00ff99);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 10px 22px rgba(0, 204, 102, 0.5);
+            transition: all 0.25s ease;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 30px rgba(0, 204, 102, 0.7);
+            background: linear-gradient(105deg, #00ff99, #00cc66);
+            letter-spacing: 2.5px;
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 8px 15px rgba(0, 204, 102, 0.5);
+        }
+
+        .disclaimer {
+            margin-top: 28px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            backdrop-filter: blur(2px);
+        }
+
+        .trust-badge {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .highlight {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 30px 20px;
+            }
+            
+            input[type="email"],
+            input[type="text"] {
+                font-size: 1rem;
+                padding: 13px 18px;
+            }
+            
+            button {
+                font-size: 1.2rem;
+                padding: 15px 16px;
+            }
+            
+            .inbox-text {
+                font-size: 1rem;
+            }
+        }
+
+        .container * {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>FORGET CLICKBANK!</h1>
+
+    <p class="subtitle">This NEW Affiliate Platform Pays Up To</p>
+
+    <div class="highlight">✨ YES! $10,000 PER SALE ✨</div>
+
+    <div class="form-container">
+        <!-- 
+            UPDATED FORM: exactly the code you provided
+            - action: https://www.sendsteed.com/subscribe/
+            - input name="e127469" type="text" placeholder="your@email.com"
+            - hidden fields: lllid=127469, lluid=sandyarta, redirect="", source=""
+            - button type="submit" text: Submit (but we enhanced with icon & style for consistency)
+            - Retains original functionality while matching the vibrant design.
+        -->
+        <form method="post" action="https://www.sendsteed.com/subscribe/">
+            <input 
+                name="e127469" 
+                required 
+                type="text" 
+                placeholder="your@email.com"
+                aria-label="Your email address"
+                autocomplete="email"
+            >
+            <input type="hidden" name="lllid" value="127469">
+            <input type="hidden" name="lluid" value="sandyarta">
+            <input type="hidden" name="redirect" value="">
+            <input type="hidden" name="source" value="">
+            
+            <div class="inbox-text">📩 CHECK YOUR INBOX AND CONFIRM YOUR EMAIL TO GET ACCESS! 📩</div>
+            <button type="submit">🚀 GET ACCESS NOW! 🚀</button>
+        </form>
+    </div>
+
+    <p class="disclaimer">⚠️ Limited spots available. Apply now before it's too late! ⚠️</p>
+    <div class="trust-badge">
+        <span>✅ Instant Access After Confirmation</span>
+        <span>💰 100% Commission Model</span>
+        <span>🔥 No Monthly Fees</span>
+    </div>
+</div>
+
+<!-- small script to prevent accidental double-submit without affecting original behavior -->
+<script>
+    (function() {
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                const submitBtn = form.querySelector('button[type="submit"]');
+                if (submitBtn && submitBtn.hasAttribute('data-submitting')) {
+                    e.preventDefault();
+                    return false;
+                }
+                if (submitBtn) {
+                    submitBtn.setAttribute('data-submitting', 'true');
+                    submitBtn.style.opacity = '0.7';
+                    submitBtn.style.cursor = 'wait';
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '⏳ PROCESSING... ⏳';
+                    // fallback reset after 8 seconds if submission gets stuck (just UX)
+                    setTimeout(() => {
+                        if (submitBtn && submitBtn.getAttribute('data-submitting') === 'true') {
+                            submitBtn.removeAttribute('data-submitting');
+                            submitBtn.style.opacity = '1';
+                            submitBtn.style.cursor = 'pointer';
+                            submitBtn.innerHTML = originalText || '🚀 GET ACCESS NOW! 🚀';
+                        }
+                    }, 8000);
+                }
+            });
+        }
+    })();
+</script>
+</body>
+</html>
